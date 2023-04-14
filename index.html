@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS file link -->
+    <link rel="stylesheet" href="todo.css">
+</head>
+<body>
+    <!-- heading -->
+    <h1>ToDo List</h1>
+    <!-- Container for the entire ToDo list -->
+    <div id="container">
+        <div>
+            <!-- Add event button to add the events -->
+            <button class="add-btn" onclick="openPopup()">Add Event</button>
+            <!-- This is the popup after clicking on add event button -->
+            <div class="add-popup" id="add-popup">
+                <!-- input tag to give the event input -->
+                <input type="text" placeholder="Add a task" class="add-task" id="add">
+                <!-- This is for buttons in the popup to add or cancle the event -->
+                <div class="popup-btns">
+                    <button class="add" onclick="closePopup(), addTaskOnClick()">Add</button>
+                <button class="close" onclick="closePopup()">Close</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- this is to show the total number added -->
+        <div>
+            <span id="total-tasks">Total tasks: <span id="tasks-counter">0</span></span>
+        </div>
+
+        <!-- This is the list events added -->
+        <div class="list">
+            <ul id="list">
+            </ul>
+        </div>
+
+        <!-- this is the popup for event added successfully -->
+        <div class="added-popup" id="added-popup">
+            <img src="tick.png">
+            <p>Your Task has Successfully Added</p>
+            <button onclick="closeaddedpopup()">OK</button>
+        </div>
+
+        <!-- this is the popup for the delect option -->
+        <div class="delect-popup" id="delect-popup">
+            <p class="cancle" id="cancle">X</p>
+            <p class="mesg">Do You Want to Delect the Task ?</p>
+            <!-- this button is to conforn to delect the event -->
+            <button class="delete" id="delete">Delect</button>
+        </div>
+    </div>
+
+    <!-- JavaScript link -->
+    <script src="todo.js"></script>
+</body>
+</html>
